@@ -10,4 +10,10 @@ spring:
 management:
   security:
     #关闭安全验证，否则访问refresh端点时会提示权限不足
-    enabled: false
+    enabled: false  
+spring:
+    zipkin:
+        base-url: http://localhost:9411
+    sleuth:
+        sampler:
+            percentage: 1.0  # spring.zipkin.base-url用來指定zipkinServer的地址.spring.sleutch.sampler.percentage用來指定採樣請求的百分比（默認為0.1，即10％）。
