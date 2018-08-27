@@ -3,15 +3,15 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 server:
-  port: 8764
+  port: 8765
 spring:
   application:
-    name: eurekaclient
+    name: eurekaclient2
   zipkin:
     base-url: http://127.0.0.1:9411
     sleuth:
         sampler:
-            percentage: 0.1 
+            percentage: 1.0
 management:
   security:
     #关闭安全验证，否则访问refresh端点时会提示权限不足
